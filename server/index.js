@@ -1,0 +1,42 @@
+// require express
+const  express = require("express");
+const path = require("path");
+var cors = require('cors')
+
+//load env variables
+require('dotenv').config()
+
+// create express app
+const  app = express();
+
+app.use(cors());
+app.use(express.urlencoded())
+app.use(express.json())
+
+// Import DB Connection
+require("./config.js");
+
+//serving frontend using middlewares
+app.use(express.static(path.join(__dirname, "..", "dist")));
+app.use(express.static("public"));
+
+// Import API route
+var routes = require('./routes'); //importing route
+routes(app);
+
+// define port to run express app
+const  port = process.env.PORT || 5000;
+
+// use middleware on express app
+app.use(express.json());
+
+// Add endpoint
+app.get('/', (req, res) => {
+    res.send("Welcome to our Task Management App");
+    });
+    
+// Listen to server
+app.listen(port, () => {
+
+console.log(`Server running at http://localhost:${port}`);
+});

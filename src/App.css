@@ -1,0 +1,15 @@
+*{
+ box-sizing: border-box;
+}
+html{
+  background: #545d89;
+  color: #dbd7d7;
+  font-family: sans-serif;
+}
+.App {
+  margin: 1px;
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  padding: 16px;
+}

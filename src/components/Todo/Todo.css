@@ -1,0 +1,42 @@
+.new-todo {
+  border: 2px solid #cccccc;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+}
+
+.new-todo-input {
+  border: none;
+  background: #4c4e59;
+  padding: 1rem;
+  border-radius: 1px;
+  color: #e5e9eb;
+  width: 100%;
+  flex: 1;
+  margin: 5px;
+  outline: none;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+}
+.new-todo-inputedit {
+  border: auto;
+  outline: auto;
+}
+
+.new-todo .button-container {
+  padding: 5px;
+}
+
+.add-button {
+  border: none;
+  background-color: #8b8c91;
+  color: #ebf9ff;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 1rem;
+  width: 100%;
+  cursor:pointer;
+}
