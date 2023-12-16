@@ -11,7 +11,7 @@
     "server": "node server/index.js",
     "dev": "concurrently \"npm run build:client\" \"npm run server\"",
     "start": "npm run server",
-    "build": "npm run build:client"
+    "build": "concurrently \"npm run build:client\" \"npm run server\""
   },
   "keywords": [
     "react",
